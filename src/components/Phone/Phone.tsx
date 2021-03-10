@@ -2,24 +2,32 @@ import styled from 'styled-components';
 import { MdKeyboardArrowLeft } from 'react-icons/md';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import avatar from '../../images/avatar.jpg';
+import MessageReceived from '../../utils/MessagesReceived/MessagesReceived';
 
 const PhoneContainer = styled.div`
     width: 225px;
     height: 470px;
-    padding: 12px;
+    padding: 10px;
     border-radius: 36px;
     box-shadow: 1px 1px 18px rgba(0, 0, 0 , 0.4);
 `;
 
 const PhoneMain = styled.div`
     background-color: hsl(270, 20%, 96%);
+    position: relative;
     width: 100%;
     height: 100%;
+    padding: 8px;
+    box-sizing: border-box;
     border-radius: 30px;
 `;
 
 const PhoneTop = styled.div`
     background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     height: 15%;
     border-radius: inherit;
     border-bottom-left-radius: 5px;
@@ -81,6 +89,10 @@ const ProfileText = styled.div`
     }
 `;
 
+const PhoneRest = styled.div`
+    margin-top: 35%;
+`;
+
 function Phone() {
     return (
         <PhoneContainer>
@@ -101,6 +113,9 @@ function Phone() {
                         <BsThreeDotsVertical />
                     </Profile>
                 </PhoneTop>
+                <PhoneRest>
+                    <MessageReceived />
+                </PhoneRest>
             </PhoneMain>
         </PhoneContainer>
     )
