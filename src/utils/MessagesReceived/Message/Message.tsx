@@ -10,7 +10,7 @@ const MessageContainer = styled.div`
     margin-bottom: 8px;
     padding: 10px;
     border-radius: 10px;
-    border-bottom-left-radius: 6px;
+    border-bottom-left-radius: 5px;
 `;
 
 interface IProps {
