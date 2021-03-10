@@ -2,16 +2,19 @@ import styled from 'styled-components';
 import Message from './Message/Message';
 
 const MessagesContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin-bottom: 16px;
 `;
 
-function MessagesReceived() {
+function MessagesSent() {
     return (
         <MessagesContainer>
             <Message message={'hhhhhhhhhhh hh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhh'} />
-            <Message message={'hhh hhh hhh hhh hhh hhh hhh'} />
+            <Message message={'hhh hhh'} />
         </MessagesContainer>
     )
 }
 
-export default MessagesReceived;
+export default MessagesSent;

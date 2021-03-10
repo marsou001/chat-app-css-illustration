@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { MdKeyboardArrowLeft } from 'react-icons/md';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import avatar from '../../images/avatar.jpg';
-import MessageReceived from '../../utils/MessagesReceived/MessagesReceived';
+import MessagesReceived from '../../utils/MessagesReceived/MessagesReceived';
+import MessagesSent from '../../utils/MessagesSent/MessagesSent';
 
 const PhoneContainer = styled.div`
     width: 225px;
@@ -114,7 +115,8 @@ function Phone() {
                     </Profile>
                 </PhoneTop>
                 <PhoneRest>
-                    <MessageReceived />
+                    <MessagesReceived />
+                    <MessagesSent />
                 </PhoneRest>
             </PhoneMain>
         </PhoneContainer>
