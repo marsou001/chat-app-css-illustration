@@ -5,6 +5,7 @@ import PhoneRest from './PhoneRest/PhoneRest';
 import SendMessageForm from './SendMessageForm/SendMessageForm';
 
 const PhoneContainer = styled.div`
+    background-color: white;
     width: 225px;
     height: 470px;
     margin-bottom: 40px;
