@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Message from './Message/Message';
-import dogImage1 from '../../images/dog-image-1.jpg';
-import dogImage2 from '../../images/dog-image-2.jpg';
-import dogImage3 from '../../images/dog-image-3.jpg';
+import dogImage1 from '../../../../images/dog-image-1.jpg';
+import dogImage2 from '../../../../images/dog-image-2.jpg';
+import dogImage3 from '../../../../images/dog-image-3.jpg';
 
 const dogImages = [
     {
