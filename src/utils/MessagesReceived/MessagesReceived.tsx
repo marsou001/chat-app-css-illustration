@@ -44,6 +44,7 @@ const Circle = styled.div`
     margin-right: 5px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 50%;
+    transform: translateY(-1px);
 `;
 
 const WalkTime = styled.span`

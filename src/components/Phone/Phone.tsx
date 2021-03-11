@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MdKeyboardArrowLeft } from 'react-icons/md';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import avatar from '../../images/avatar.jpg';
 import MessagesReceived from '../../utils/MessagesReceived/MessagesReceived';
@@ -46,7 +47,7 @@ const Topper = styled.div`
     margin: auto;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    transform: translateY(-12px);
+    transform: translateY(-10px);
 `;
 
 const Profile = styled.div`
@@ -89,9 +90,43 @@ const ProfileText = styled.div`
         color: hsl(276, 100%, 81%);
     }
 `;
-
+/*margin-top: 35%;
+ */
 const PhoneRest = styled.div`
-    margin-top: 35%;
+    overflow-y: hidden;    
+`;
+
+const SendMessageForm = styled.form`
+    position: relative;
+`;
+
+const SendMessageField = styled.input`
+    font-size: 0.6rem;    
+    width: 100%;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 50px;    
+    outline: none;
+    box-sizing: border-box;
+    &::placeholder {
+        color: hsl(206, 6%, 79%);
+    }
+`;
+
+const SendButton = styled.button`
+    background-color: hsl(271, 36%, 24%);
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    width: 23px;
+    height: 23px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    svg {
+        color: white;
+        transform: translateY(2px) scale(1.5);
+    }
 `;
 
 function Phone() {
@@ -116,8 +151,15 @@ function Phone() {
                 </PhoneTop>
                 <PhoneRest>
                     <MessagesReceived />
-                    <MessagesSent />
+                    <MessagesSent />                    
+                    {/* <MessagesReceived /> */}
                 </PhoneRest>
+                <SendMessageForm>
+                    <SendMessageField type="text" name="message" placeholder='Type a message...' />
+                    <SendButton>
+                        <MdKeyboardArrowRight />
+                    </SendButton>
+                </SendMessageForm>
             </PhoneMain>
         </PhoneContainer>
     )
