@@ -1,5 +1,22 @@
 .App {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .App {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: 625px;
+  }
+}
+
+@media (min-width: 992px) {
+  .App {    
+    width: 70%;
+    max-width: 850px;
+  }
 }

@@ -5,7 +5,7 @@ const SendMessageField = styled.input`
     width: 100%;
     padding: 12px 18px;
     border: none;
-    border-radius: 50px;    
+    border-radius: 30px;    
     outline: none;
     box-sizing: border-box;
     &::placeholder {
