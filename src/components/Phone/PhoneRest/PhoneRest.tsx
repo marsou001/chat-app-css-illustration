@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import MessagesReceived from '../../../utils/MessagesReceived/MessagesReceived';
-import MessagesSent from '../../../utils/MessagesSent/MessagesSent';
+import Messages from '../../../utils/Messages/Messages';
 
 const PhoneRestContainer = styled.div`
     overflow-y: hidden;    
@@ -8,9 +7,9 @@ const PhoneRestContainer = styled.div`
 
 function PhoneRest() {
     return (
-        <PhoneRestContainer>
-            <MessagesReceived />
-            <MessagesSent /> 
+        <PhoneRestContainer>            
+            <Messages sent={false} />
+            <Messages sent={true} />
         </PhoneRestContainer>
     )
 }

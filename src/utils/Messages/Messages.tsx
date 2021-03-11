@@ -1,27 +1,51 @@
 import styled from 'styled-components';
 import Message from './Message/Message';
-import im from '../../images/dog-image-1.jpg';
+import dogImage1 from '../../images/dog-image-1.jpg';
+import dogImage2 from '../../images/dog-image-2.jpg';
+import dogImage3 from '../../images/dog-image-3.jpg';
+
+const dogImages = [
+    {
+        id: 1,
+        image: dogImage1
+    },
+    {
+        id: 2,
+        image: dogImage2
+    },
+    {
+        id: 3,
+        image: dogImage3
+    },
+];
+
+interface IProps {
+    sent: boolean
+}
 
 const MessagesContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-${(props: IProps) => props.sent ? 'end' : 'start'};
     margin-bottom: 16px;
 `;
 
 const ImagesContainer = styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-${(props: IProps) => props.sent ? 'end' : 'start'};
     margin-bottom: 8px;
 `;
 
 const Image = styled.img`
     width: 40px;
     height: 40px;
-    margin-right: 8px;
+    margin-${(props: IProps) => props.sent ? 'left' : 'right'}: 8px;
     border-radius: 12px;
 `;
 
 const MessagesReceivedRates = styled.div`
     background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-    display: flex;
+    display: ${(props: IProps) => props.sent ? 'none' : 'flex'};
     justify-content: space-between;
     align-items: center;
     width: 65%;
@@ -58,34 +82,34 @@ const Rate = styled.span`
     color: rgba(255, 255, 255, 0.9);
 `;
 
-function MessagesReceived() {
+function MessagesSent({ sent }: IProps) {
     return (
         <>
-            <ImagesContainer>
-                <Image src={im} alt='' />
-                <Image src={im} alt='' />
-                <Image src={im} alt='' />
+            <ImagesContainer sent={sent}>                
+                {dogImages.map(dogImage => (
+                    <Image key={dogImage.id} src={dogImage.image} sent={sent} alt='' />
+                ))}
             </ImagesContainer>
-            <MessagesContainer>
-                <Message message={'hhhhhhhhhhh hh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhh'} />
-                <Message message={'hhh hhh hhh hhh hhh hhh hhh'} />
-                <MessagesReceivedRates>
+            <MessagesContainer sent={sent}>
+                <Message sent={sent} message={'hhhhhhhhhhh hh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhh'} />
+                <Message sent={sent} message={'hhh hhh'} />
+                <MessagesReceivedRates sent={sent}>
                     <WalkTimeContainer>
                         <Circle />
                         <WalkTime>30 minutes walk</WalkTime>
                     </WalkTimeContainer>
                     <Rate>$29</Rate>
                 </MessagesReceivedRates>
-                <MessagesReceivedRates>
+                <MessagesReceivedRates sent={sent}>
                     <WalkTimeContainer>
                         <Circle />
                         <WalkTime>30 minutes walk</WalkTime>
                     </WalkTimeContainer>
                     <Rate>$29</Rate>
                 </MessagesReceivedRates>
-            </MessagesContainer>            
+            </MessagesContainer>
         </>
     )
 }
 
-export default MessagesReceived;
+export default MessagesSent;
