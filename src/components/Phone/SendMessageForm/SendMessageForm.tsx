@@ -4,7 +4,10 @@ import SendMessageField from './SendMessageField/SendMessageField';
 import SendButton from './SendButton/SendButton';
 
 const SendMessageFormContainer = styled.form`
-    position: relative;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;    
+    left: 8px;    
 `;
 
 function SendMessageForm() {

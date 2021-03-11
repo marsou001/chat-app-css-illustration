@@ -8,6 +8,7 @@ const PhoneMain = styled.div`
     padding: 8px;
     box-sizing: border-box;
     border-radius: 30px;
+    overflow: hidden;
 `;
 
 export default PhoneMain;

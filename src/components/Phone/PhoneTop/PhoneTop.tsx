@@ -18,6 +18,7 @@ const PhoneTopContainer = styled.div`
     border-radius: inherit;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    z-index: 1;
     svg {
         color: white;
     }

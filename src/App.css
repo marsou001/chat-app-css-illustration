@@ -5,6 +5,10 @@
   margin: 80px auto;
 }
 
+/* ::-webkit-scrollbar {
+  background: green;
+}  */
+
 @media (min-width: 768px) {
   .App {
     flex-direction: row;
