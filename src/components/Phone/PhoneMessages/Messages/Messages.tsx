@@ -15,7 +15,7 @@ interface MessagesProps {
     messages: MessageArr[]
 }
 
-function MessagesSent({ sent, images, rate, messages }: MessagesProps) {
+function Messages({ sent, images, rate, messages }: MessagesProps) {
     return (
         <>
             <Images sent={sent} images={images} />
@@ -32,4 +32,4 @@ function MessagesSent({ sent, images, rate, messages }: MessagesProps) {
     )
 }
 
-export default MessagesSent;
+export default Messages;
