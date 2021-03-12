@@ -1,20 +1,6 @@
 import styled from 'styled-components';
 import Message from './Message/Message';
-
-const dogImages = [
-    {
-        id: 1,
-        image: dogImage1
-    },
-    {
-        id: 2,
-        image: dogImage2
-    },
-    {
-        id: 3,
-        image: dogImage3
-    },
-];
+import Images from './Images/Images';
 
 const WalkTimeContainer = styled.div`
     display: flex;
@@ -46,11 +32,7 @@ const Rate = styled.span`
 function MessagesSent({ sent }: IProps) {
     return (
         <>
-            <ImagesContainer sent={sent}>                
-                {dogImages.map(dogImage => (
-                    <Image key={dogImage.id} src={dogImage.image} sent={sent} alt='' />
-                ))}
-            </ImagesContainer>
+            <Images />
             <MessagesContainer sent={sent}>
                 <Message sent={sent} message={'hhhhhhhhhhh hh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhh'} />
                 <Message sent={sent} message={'hhh hhh'} />
