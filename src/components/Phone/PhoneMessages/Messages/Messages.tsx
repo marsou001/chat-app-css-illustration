@@ -3,20 +3,30 @@ import Images from './Images/Images';
 import MessagesContainer from './MessagesContainer/MessagesContainer';
 import MessagesReceivedRates from './MessagesReceivedRates/MessagesReceivedRates';
 
-interface IProps {
-    sent: boolean,
-    images: boolean
+interface MessageArr {
+    id: number,
+    message: string
 }
 
-function MessagesSent({ sent, images }: IProps) {
+interface MessagesProps {
+    sent: boolean,
+    images: boolean,  
+    rate: boolean,
+    messages: MessageArr[]
+}
+
+function MessagesSent({ sent, images, rate, messages }: MessagesProps) {
     return (
         <>
             <Images sent={sent} images={images} />
-            <MessagesContainer sent={sent}>
-                <Message sent={sent} message={'hhhhhhhhhhh hh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhh'} />
-                <Message sent={sent} message={'hhh hhh'} />
-                <MessagesReceivedRates sent={sent} />
-                <MessagesReceivedRates sent={sent} />
+            <MessagesContainer sent={sent}>                
+                {messages.map((message) => (
+                    <>
+                        <Message key={message.id} sent={sent} message={message.message} /> 
+                        <MessagesReceivedRates time={'30 minutes'} price={29} rate={rate} sent={sent} />
+                        <MessagesReceivedRates time={'1 hour'} price={49} rate={rate} sent={sent} />                    
+                    </>
+                ))}               
             </MessagesContainer>
         </>
     )

@@ -12,9 +12,9 @@ const MessageContainer = styled.div`
     font-size: 0.6rem;
     color: ${(props: IProps) => props.sent ? 'hsl(271, 15%, 43%)' : 'hsl(276, 55%, 52%)'};
     background-color: ${(props: IProps) => props.sent ? 'hsl(0, 0%, 100%)' : 'hsl(272, 41%, 93%)'};
-    word-break: break-all;
+    line-height: 0.8rem;
     width: fit-content;
-    max-width: 50%;
+    max-width: 60%;
     margin-bottom: 8px;
     padding: 10px;
     border-radius: 10px;

@@ -21,7 +21,7 @@ const dogImages = [
 
 interface IProps {
     sent: boolean,
-    images: boolean
+    images: boolean,
 }
 
 const ImagesContainer = styled.div`
