@@ -20,18 +20,19 @@ const dogImages = [
 ];
 
 interface IProps {
-    sent: boolean
+    sent: boolean,
+    images: boolean
 }
 
 const ImagesContainer = styled.div`
-    display: flex;
+    display: ${(props: IProps) => props.images ? 'flex' : 'none'};
     justify-content: flex-${(props: IProps) => props.sent ? 'end' : 'start'};
     margin-bottom: 8px;
 `;
 
-function Images({ sent }: IProps) {
+function Images({ sent, images }: IProps) {
     return (
-        <ImagesContainer sent={sent}>
+        <ImagesContainer sent={sent} images={images}>
             {dogImages.map(dogImage => (
                 <Image key={dogImage.id} src={dogImage.image} sent={sent} alt='' />
             ))}

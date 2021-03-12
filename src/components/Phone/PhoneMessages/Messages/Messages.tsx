@@ -4,13 +4,14 @@ import MessagesContainer from './MessagesContainer/MessagesContainer';
 import MessagesReceivedRates from './MessagesReceivedRates/MessagesReceivedRates';
 
 interface IProps {
-    sent: boolean
+    sent: boolean,
+    images: boolean
 }
 
-function MessagesSent({ sent }: IProps) {
+function MessagesSent({ sent, images }: IProps) {
     return (
         <>
-            <Images sent={sent} />
+            <Images sent={sent} images={images} />
             <MessagesContainer sent={sent}>
                 <Message sent={sent} message={'hhhhhhhhhhh hh hhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhh'} />
                 <Message sent={sent} message={'hhh hhh'} />

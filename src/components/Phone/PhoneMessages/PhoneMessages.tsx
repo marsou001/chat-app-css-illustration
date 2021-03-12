@@ -13,9 +13,9 @@ const PhoneRestContainer = styled.div`
 function PhoneMessages() {
     return (
         <PhoneRestContainer>            
-            <Messages sent={false} />
-            <Messages sent={true} />
-            <Messages sent={true} />
+            <Messages sent={false} images={true} />
+            <Messages sent={true} images={true} />
+            <Messages sent={false} images={false} />
         </PhoneRestContainer>
     )
 }
