@@ -10,7 +10,7 @@ const PhoneRestContainer = styled.div`
     }       
 `;
 
-function PhoneRest() {
+function PhoneMessages() {
     return (
         <PhoneRestContainer>            
             <Messages sent={false} />
@@ -20,4 +20,4 @@ function PhoneRest() {
     )
 }
 
-export default PhoneRest;
+export default PhoneMessages;

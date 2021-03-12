@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PhoneMain from './PhoneMain/PhoneMain';
 import PhoneTop from './PhoneTop/PhoneTop';
-import PhoneRest from './PhoneRest/PhoneRest';
+import PhoneMessages from './PhoneMessages/PhoneMessages';
 import SendMessageForm from './SendMessageForm/SendMessageForm';
 
 const PhoneContainer = styled.div`
@@ -22,7 +22,7 @@ function Phone() {
         <PhoneContainer>
             <PhoneMain>
                 <PhoneTop />                     
-                <PhoneRest />
+                <PhoneMessages />
                 <SendMessageForm />                  
             </PhoneMain>
         </PhoneContainer>
