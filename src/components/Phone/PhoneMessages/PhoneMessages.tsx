@@ -4,7 +4,7 @@ import messages from './messages';
 
 const PhoneRestContainer = styled.div`
     height: 75%;
-    margin-top: 34%;
+    padding-top: 34%;
     overflow-y: scroll;     
     &::-webkit-scrollbar {
         background: transparent;
