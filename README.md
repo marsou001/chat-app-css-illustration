@@ -1,3 +1,5 @@
+This is a chat-app-illustration project, done as a challenge posted on [https://www.frontendmentor.io/](frontendmentor.io). To scroll the messages, click on it and the arrow Up and Down to go up and down.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
