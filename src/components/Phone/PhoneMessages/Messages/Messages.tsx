@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import Message from './Message/Message';
-import dogImage1 from '../../../../images/dog-image-1.jpg';
-import dogImage2 from '../../../../images/dog-image-2.jpg';
-import dogImage3 from '../../../../images/dog-image-3.jpg';
 
 const dogImages = [
     {
@@ -18,42 +15,6 @@ const dogImages = [
         image: dogImage3
     },
 ];
-
-interface IProps {
-    sent: boolean
-}
-
-const MessagesContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-${(props: IProps) => props.sent ? 'end' : 'start'};
-    margin-bottom: 16px;
-`;
-
-const ImagesContainer = styled.div`
-    display: flex;
-    justify-content: flex-${(props: IProps) => props.sent ? 'end' : 'start'};
-    margin-bottom: 8px;
-`;
-
-const Image = styled.img`
-    width: 40px;
-    height: 40px;
-    margin-${(props: IProps) => props.sent ? 'left' : 'right'}: 8px;
-    border-radius: 12px;
-`;
-
-const MessagesReceivedRates = styled.div`
-    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-    display: ${(props: IProps) => props.sent ? 'none' : 'flex'};
-    justify-content: space-between;
-    align-items: center;
-    width: 65%;
-    margin-bottom: 8px;
-    padding: 10px;
-    border-radius: 10px;
-    border-bottom-left-radius: 5px;
-`;
 
 const WalkTimeContainer = styled.div`
     display: flex;
