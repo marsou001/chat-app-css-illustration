@@ -3,7 +3,8 @@ import Messages from './Messages/Messages';
 import messages from './messages';
 
 const PhoneRestContainer = styled.div`
-    height: 95%;
+    height: 75%;
+    margin-top: 34%;
     overflow-y: scroll;     
     &::-webkit-scrollbar {
         background: transparent;
