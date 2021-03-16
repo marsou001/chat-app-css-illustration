@@ -9,7 +9,9 @@ const PhoneRestContainer = styled.div`
     &::-webkit-scrollbar {
         background: transparent;
         width: 0;
-    }       
+    }           
+    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
 `;
 
 function PhoneMessages() {
